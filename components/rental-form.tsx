@@ -293,12 +293,13 @@ export function RentalForm() {
 
           <div className="sm:col-span-2">
             <label htmlFor="paymentProof" className={labelClass}>
-              PAYMENT PROOF (OPTIONAL)
+              PAYMENT PROOF (Important) — Upload a screenshot or PDF of your bank transfer or payment receipt. Accepted formats: JPG, PNG, PDF.
             </label>
             <input
               id="paymentProof"
               name="paymentProof"
               type="file"
+              required
               accept="image/*,.pdf"
               onChange={(event) => {
                 const file = event.currentTarget.files?.[0] ?? null
@@ -343,93 +344,89 @@ export function RentalForm() {
         </p>
       </form>
 
-      {showSummary ? (
-        <div className="fixed inset-0 z-50 grid place-items-center bg-black/70 px-4 py-10">
-          <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-primary/20 bg-secondary/95 shadow-2xl">
-            <div className="border-b border-primary/15 px-6 py-5 bg-background/95">
-              <h2 className="text-xl font-semibold text-cream">Review your booking</h2>
-              <p className="mt-1 text-sm text-cream/65">
-                Please review the details below before final submission.
-              </p>
-            </div>
-            <div className="space-y-5 px-6 py-6 text-sm text-cream">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Piece
-                  </p>
-                  <p className="mt-1 text-base">{selected?.name ?? item}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Size
-                  </p>
-                  <p className="mt-1 text-base">{size}</p>
-                </div>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Occasion
-                  </p>
-                  <p className="mt-1 text-base">{occasion}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Dates
-                  </p>
-                  <p className="mt-1 text-base">{eventDate} → {returnDate}</p>
-                </div>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Contact
-                  </p>
-                  <p className="mt-1 text-base">{fullName}, {email}</p>
-                  <p className="text-base">{phone}</p>
-                </div>
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                    Delivery postcode
-                  </p>
-                  <p className="mt-1 text-base">{postcode}</p>
-                </div>
-              </div>
-              <div>
-                <p className="text-[10px] uppercase tracking-[0.28em] text-cream/50">
-                  Payment proof
-                </p>
-                <p className="mt-1 text-base">
-                  {paymentProofFile ? paymentProofFile.name : 'Not attached yet'}
-                </p>
-              </div>
-              <div className="rounded-xs border border-primary/20 bg-background/80 p-4 text-sm text-cream/75">
-                <p className="font-semibold text-cream">Please note</p>
-                <p className="mt-2 leading-relaxed">
-                  Refundable damage deposit fee and delivery fee apply. Delivery fee does not include return fee. You are expected to return the item by the agreed return date.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col gap-3 border-t border-primary/15 bg-background/95 px-6 py-5 sm:flex-row sm:justify-between">
-              <button
-                type="button"
-                onClick={() => setShowSummary(false)}
-                className="rounded-xs border border-primary/25 bg-background px-5 py-3 text-[11px] font-semibold text-cream transition hover:border-primary"
-              >
-                Edit details
-              </button>
-              <button
-                type="button"
-                onClick={handleFinalSubmit}
-                className="rounded-xs bg-primary px-5 py-3 text-[11px] font-semibold tracking-brand text-primary-foreground transition hover:bg-primary/90"
-              >
-                Confirm and submit request
-              </button>
-            </div>
+      {showSummary && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-3 sm:p-4 backdrop-blur-sm">
+    <div className="flex max-h-[90vh] w-full max-w-lg flex-col overflow-hidden rounded-lg border border-primary/20 bg-secondary/95 shadow-2xl">
+      {/* Header */}
+      <div className="shrink-0 border-b border-primary/15 bg-background/95 px-4 py-3 sm:px-5">
+        <h2 className="text-lg font-semibold text-cream">Review your booking</h2>
+        <p className="mt-0.5 text-xs text-cream/65">
+          Please review the details below before final submission.
+        </p>
+      </div>
+
+      {/* Scrollable Content Body */}
+      <div className="overflow-y-auto space-y-3.5 px-4 py-4 sm:px-5 text-xs text-cream">
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Piece</p>
+            <p className="mt-0.5 text-sm font-medium">{selected?.name ?? item}</p>
+          </div>
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Size</p>
+            <p className="mt-0.5 text-sm font-medium">{size}</p>
           </div>
         </div>
-      ) : null}
+
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Occasion</p>
+            <p className="mt-0.5 text-sm font-medium">{occasion}</p>
+          </div>
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Dates</p>
+            <p className="mt-0.5 text-sm font-medium">{eventDate} → {returnDate}</p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Contact</p>
+            <p className="mt-0.5 text-xs font-medium truncate">{fullName}</p>
+            <p className="text-xs text-cream/70 truncate">{email}</p>
+            <p className="text-xs text-cream/70">{phone}</p>
+          </div>
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Delivery postcode</p>
+            <p className="mt-0.5 text-sm font-medium">{postcode}</p>
+          </div>
+        </div>
+
+        <div>
+          <p className="text-[9px] uppercase tracking-[0.2em] text-cream/50">Payment proof</p>
+          <p className="mt-0.5 text-xs font-medium truncate">
+            {paymentProofFile ? paymentProofFile.name : 'Not attached yet'}
+          </p>
+        </div>
+
+        <div className="rounded-xs border border-primary/20 bg-background/80 p-3 text-xs text-cream/75">
+          <p className="font-semibold text-cream">Please note</p>
+          <p className="mt-1 leading-snug">
+            Refundable damage deposit fee and delivery fee apply. Delivery fee does not include return fee. You are expected to return the item by the agreed return date.
+          </p>
+        </div>
+      </div>
+
+      {/* Fixed Sticky Footer */}
+      <div className="shrink-0 flex flex-col gap-2 border-t border-primary/15 bg-background/95 px-4 py-3 sm:flex-row sm:justify-end sm:px-5">
+        <button
+          type="button"
+          onClick={() => setShowSummary(false)}
+          className="rounded-xs border border-primary/25 bg-background px-4 py-2.5 text-[11px] font-semibold text-cream transition hover:border-primary"
+        >
+          Edit details
+        </button>
+        <button
+          type="button"
+          onClick={handleFinalSubmit}
+          className="rounded-xs bg-primary px-4 py-2.5 text-[11px] font-semibold tracking-brand text-primary-foreground transition hover:bg-primary/90"
+        >
+          Confirm and submit request
+        </button>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   )
 }

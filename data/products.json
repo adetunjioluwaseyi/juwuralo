@@ -1,0 +1,11 @@
+[
+  {
+    "id": "1",
+    "name": "Royal Purple Aso Oke Set",
+    "category": "couples",
+    "type": "both",
+    "price": "180",
+    "image": "/images/hero-couple.png",
+    "available": true
+  }
+]
