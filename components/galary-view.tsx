@@ -2,8 +2,9 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { X } from 'lucide-react'
+import { Link, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 
 type Shot = {
   src: string
@@ -52,74 +53,74 @@ const SHOTS: Shot[] = [
     caption: 'Groom in ivory agbada',
     category: 'Grooms',
   },
-  {
-    src: '/images/collection-esan.png',
-    alt: 'Woman in red Esan attire with coral bead headpiece',
-    caption: 'Esan ceremonial look',
-    category: 'Bridal',
-  },
-  {
-    src: '/images/edo-groom.png',
-    alt: 'Edo groom in white wrapper with layered coral bead necklaces',
-    caption: 'Edo groom styling',
-    category: 'Grooms',
-    tall: true,
-  },
-  {
-    src: '/images/collection-kids.png',
-    alt: 'Child in cream and gold traditional agbada with cap',
-    caption: 'Little one in cream agbada',
-    category: 'Kids',
-  },
-  {
-    src: '/images/collection-asooke.png',
-    alt: 'Woman in teal and gold Aso Oke with ornate gele headwrap',
-    caption: 'Teal and gold Aso Oke',
-    category: 'Aso Oke',
-  },
-  {
-    src: '/images/kids-asooke.png',
-    alt: 'Young girl in purple and gold Aso Oke with small gele',
-    caption: 'Kids purple Aso Oke',
-    category: 'Kids',
-  },
-  {
-    src: '/images/beads-crown.png',
-    alt: 'Ornate coral bead crown headpiece on a stand',
-    caption: 'Coral crown headpiece',
-    category: 'Accessories',
-  },
-  {
-    src: '/images/esan-ceremonial.png',
-    alt: 'Woman in burgundy and gold Esan ceremonial attire',
-    caption: 'Burgundy ceremonial set',
-    category: 'Bridal',
-  },
-  {
-    src: '/images/styling.png',
-    alt: 'Hands tying an elaborate gold and purple gele headwrap',
-    caption: 'Gele styling session',
-    category: 'Weddings',
-  },
-  {
-    src: '/images/beads-bracelets.png',
-    alt: 'Coral bead bracelet and earring sets on velvet',
-    caption: 'Bracelet and earring sets',
-    category: 'Accessories',
-  },
+//   {
+//     src: '/images/collection-esan.png',
+//     alt: 'Woman in red Esan attire with coral bead headpiece',
+//     caption: 'Esan ceremonial look',
+//     category: 'Bridal',
+//   },
+//   {
+//     src: '/images/edo-groom.png',
+//     alt: 'Edo groom in white wrapper with layered coral bead necklaces',
+//     caption: 'Edo groom styling',
+//     category: 'Grooms',
+//     tall: true,
+//   },
+//   {
+//     src: '/images/collection-kids.png',
+//     alt: 'Child in cream and gold traditional agbada with cap',
+//     caption: 'Little one in cream agbada',
+//     category: 'Kids',
+//   },
+//   {
+//     src: '/images/collection-asooke.png',
+//     alt: 'Woman in teal and gold Aso Oke with ornate gele headwrap',
+//     caption: 'Teal and gold Aso Oke',
+//     category: 'Aso Oke',
+//   },
+//   {
+//     src: '/images/kids-asooke.png',
+//     alt: 'Young girl in purple and gold Aso Oke with small gele',
+//     caption: 'Kids purple Aso Oke',
+//     category: 'Kids',
+//   },
+//   {
+//     src: '/images/beads-crown.png',
+//     alt: 'Ornate coral bead crown headpiece on a stand',
+//     caption: 'Coral crown headpiece',
+//     category: 'Accessories',
+//   },
+//   {
+//     src: '/images/esan-ceremonial.png',
+//     alt: 'Woman in burgundy and gold Esan ceremonial attire',
+//     caption: 'Burgundy ceremonial set',
+//     category: 'Bridal',
+//   },
+//   {
+//     src: '/images/styling.png',
+//     alt: 'Hands tying an elaborate gold and purple gele headwrap',
+//     caption: 'Gele styling session',
+//     category: 'Weddings',
+//   },
+//   {
+//     src: '/images/beads-bracelets.png',
+//     alt: 'Coral bead bracelet and earring sets on velvet',
+//     caption: 'Bracelet and earring sets',
+//     category: 'Accessories',
+//   },
 ]
 
 const CATEGORIES = [
   'All',
   'Weddings',
   'Bridal',
-  'Grooms',
-  'Aso Oke',
-  'Accessories',
+//   'Grooms',
+//   'Aso Oke',
+//   'Accessories',
   'Kids',
 ]
 
-export function GalleryGrid() {
+export function GalleryView() {
   const [filter, setFilter] = useState('All')
   const [active, setActive] = useState<Shot | null>(null)
 
@@ -127,8 +128,20 @@ export function GalleryGrid() {
     filter === 'All' ? SHOTS : SHOTS.filter((shot) => shot.category === filter)
 
   return (
+    
     <>
-      <ul className="flex flex-wrap justify-center gap-2">
+    <section id="collections" className="bg-cream pb-16 lg:pb-20">
+        
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10">
+        <h2 className="text-center font-serif text-3xl text-[#1a1035] sm:text-4xl">
+          Gallery
+        </h2>
+        <p className="mx-auto mt-3 max-w-lg text-center text-sm leading-relaxed text-[#1a1035]/65">
+          A glimpse of our curated pieces in action — from weddings and
+          engagements to photoshoots and special occasions.
+        </p>
+      </div>
+      {/* <ul className="flex flex-wrap justify-center gap-2">
         {CATEGORIES.map((category) => (
           <li key={category}>
             <button
@@ -139,14 +152,14 @@ export function GalleryGrid() {
                 'rounded-xs border px-4 py-2.5 text-[10px] tracking-brand transition-colors',
                 filter === category
                   ? 'border-primary bg-primary text-primary-foreground'
-                  : 'border-primary/25 text-cream/70 hover:border-primary hover:text-primary',
+                  : 'border-primary/100 text-primary/100 hover:border-primary hover:text-primary',
               )}
             >
               {category.toUpperCase()}
             </button>
           </li>
         ))}
-      </ul>
+      </ul> */}
 
       <ul className="mt-10 grid auto-rows-[200px] grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
         {shots.map((shot) => (
@@ -223,6 +236,19 @@ export function GalleryGrid() {
         </div>
         
       ) : null}
+
+        <div className="mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-10">
+        <a
+              href="/gallery"
+              className="group flex items-center justify-center gap-2 rounded-xs border border-[#D4AF37]/50 px-8 py-4 text-[15px] font-semibold tracking-[0.16em] text-[#D4AF37] transition-colors hover:bg-[#D4AF37]/10 sm:border-0 sm:px-0 sm:py-0"
+            >
+              View Full Gallery
+              <ArrowRight className="size-7 transition-transform group-hover:translate-x-1" />
+            </a>
+        </div>
+      </section>
     </>
+    
+
   )
 }

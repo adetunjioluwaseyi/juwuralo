@@ -66,7 +66,7 @@ export function SiteFooter() {
         ))}
       </div>
 
-      <div className="border-t border-primary/10">
+      <div className="border-t border-primary/30">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-6 text-xs text-cream/60 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-10">
           <ul className="flex flex-col gap-3 sm:flex-row sm:gap-8">
             <li className="flex items-center gap-2">
