@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@theme inline {
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --color-gold: var(--gold);
+  --color-cream: var(--cream);
+  --color-plum: var(--plum);
+  --color-cocoa: var(--cocoa);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+:root {
+  color-scheme: dark;
+  --gold: #c8a24a;
+  --cream: #f7f4ec;
+  --plum: #44315f;
+  --cocoa: #6e4e2e;
+  --background: #1a1035;
+  --foreground: #f7f4ec;
+  --card: #f7f4ec;
+  --card-foreground: #1a1035;
+  --popover: #221646;
+  --popover-foreground: #f7f4ec;
+  --primary: #c8a24a;
+  --primary-foreground: #1a1035;
+  --secondary: #44315f;
+  --secondary-foreground: #f7f4ec;
+  --muted: #44315f;
+  --muted-foreground: #cdc4dd;
+  --accent: #6e4e2e;
+  --accent-foreground: #f7f4ec;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: rgba(200, 162, 74, 0.28);
+  --input: rgba(200, 162, 74, 0.28);
+  --ring: #c8a24a;
+  --radius: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@utility tracking-brand {
+  letter-spacing: 0.22em;
+}
