@@ -16,39 +16,39 @@ type Shot = {
 
 const SHOTS: Shot[] = [
   {
-    src: '/images/hero-couple.png',
+    src: '/images/h.jpg',
     alt: 'Couple in purple and gold Aso Oke attire with coral beads',
     caption: 'Traditional wedding — London',
     category: 'Weddings',
     tall: true,
   },
   {
-    src: '/images/collection-edo.png',
+    src: '/images/e.jpg',
     alt: 'Edo bride in coral bead crown and purple attire',
     caption: 'Edo bridal styling',
     category: 'Bridal',
   },
   {
-    src: '/images/asooke-purple.png',
+    src: '/images/v.jpg',
     alt: 'Woman in deep purple and gold Aso Oke with sculptural gele',
     caption: 'Purple royal Aso Oke',
     category: 'Aso Oke',
   },
   {
-    src: '/images/edo-bridal.png',
+    src: '/images/u.jpg',
     alt: 'Edo bride in red velvet wrapper with coral bead corset',
     caption: 'Engagement ceremony — Manchester',
     category: 'Bridal',
     tall: true,
   },
   {
-    src: '/images/collection-beads.png',
+    src: '/images/n.jpg',
     alt: 'Layered traditional coral bead necklace sets',
     caption: 'Coral bead detail',
     category: 'Accessories',
   },
   {
-    src: '/images/asooke-ivory.png',
+    src: '/images/l.jpg',
     alt: 'Man in ivory and gold embroidered agbada with fila cap',
     caption: 'Groom in ivory agbada',
     category: 'Grooms',

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type { BookingRequest } from '@/lib/bookings'
 import { createBooking, getBookings, updateBooking } from '@/lib/bookings'
 import { sendEmail } from '@/lib/mailer'
+import { sendWhatsAppMessage, buildBookingConfirmationMessage } from '@/lib/whatsapp'
 import { promises as fs } from 'fs'
 import path from 'path'
 
@@ -81,6 +82,14 @@ export async function POST(request: Request) {
     } catch (e) {
       // swallow email errors — booking still succeeds
       console.error('Failed to send admin notification', e)
+    }
+
+    if (booking.phone) {
+      try {
+        await sendWhatsAppMessage(booking.phone, buildBookingConfirmationMessage(booking))
+      } catch (e) {
+        console.error('Failed to send WhatsApp confirmation', e)
+      }
     }
 
     return NextResponse.json({ booking }, { status: 201 })

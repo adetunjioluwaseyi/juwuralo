@@ -25,7 +25,7 @@ export const COLLECTIONS: Collection[] = [
     slug: 'edo',
     name: 'EDO',
     sub: 'COLLECTION',
-    image: '/images/collection-edo.png',
+    image: '/images/e.jpg',
     alt: 'Edo bride in coral bead crown and purple attire',
     tagline: 'Regal coral, royal heritage',
     description:
@@ -70,7 +70,7 @@ export const COLLECTIONS: Collection[] = [
     slug: 'aso-oke',
     name: 'ASO OKE',
     sub: 'COLLECTION',
-    image: '/images/collection-asooke.png',
+    image: '/images/q.jpg',
     alt: 'Woman in teal and gold Aso Oke with gele headwrap',
     tagline: 'Handwoven Yoruba luxury',
     description:
@@ -149,7 +149,7 @@ export const COLLECTIONS: Collection[] = [
     slug: 'coral-beads',
     name: 'CORAL BEADS',
     sub: '& ACCESSORIES',
-    image: '/images/collection-beads.png',
+    image: '/images/n.jpg',
     alt: 'Traditional coral bead necklace sets',
     tagline: 'The finishing touch',
     description:
@@ -194,7 +194,7 @@ export const COLLECTIONS: Collection[] = [
     slug: 'kids',
     name: 'KIDS',
     sub: 'COLLECTION',
-    image: '/images/collection-kids.png',
+    image: '/images/b.jpg',
     alt: 'Child wearing cream and gold traditional agbada',
     tagline: 'Little ones, big heritage',
     description:
@@ -203,7 +203,7 @@ export const COLLECTIONS: Collection[] = [
       {
         slug: 'kids-cream-agbada',
         name: 'Kids Cream Agbada',
-        image: '/images/collection-kids.png',
+        image: '/images/r.jpg',
         alt: 'Child in cream and gold traditional agbada with cap',
         rentalPrice: 85,
         purchasePrice: 340,
@@ -214,7 +214,7 @@ export const COLLECTIONS: Collection[] = [
       {
         slug: 'kids-purple-aso-oke',
         name: 'Kids Purple Aso Oke',
-        image: '/images/kids-asooke.png',
+        image: '/images/l.jpg',
         alt: 'Young girl in purple and gold Aso Oke with small gele',
         rentalPrice: 95,
         purchasePrice: 380,

@@ -71,15 +71,15 @@ export function SiteFooter() {
           <ul className="flex flex-col gap-3 sm:flex-row sm:gap-8">
             <li className="flex items-center gap-2">
               <MapPin className="size-4 text-primary" aria-hidden="true" />
-              London, United Kingdom
+             Suite 534 80A ruskin avenue Welling Kent DA16 3QQ
             </li>
             <li className="flex items-center gap-2">
               <Phone className="size-4 text-primary" aria-hidden="true" />
-              +44 7000 000000
+              +44 07586 738130
             </li>
             <li className="flex items-center gap-2">
               <Mail className="size-4 text-primary" aria-hidden="true" />
-              hello@juwuraloalasooke.co.uk
+              info@juwuraloalasooke.com
             </li>
           </ul>
           <p>

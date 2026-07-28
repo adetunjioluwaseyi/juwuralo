@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Playfair_Display, Montserrat } from 'next/font/google'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
+import { WhatsappChatButton } from '@/components/whatsapp-chat-button'
 import './globals.css'
 
 const playfair = Playfair_Display({
@@ -62,6 +63,7 @@ export default function RootLayout({
         <SiteHeader />
         {children}
         <SiteFooter />
+        <WhatsappChatButton />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

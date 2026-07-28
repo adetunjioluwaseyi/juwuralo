@@ -21,18 +21,18 @@ export const metadata: Metadata = {
 const STEPS = [
   {
     icon: Search,
-    title: 'Browse & choose',
-    body: 'Explore our collections and pick the pieces that suit your celebration and colour scheme.',
+    body:  'Payment Details — Bank Transfer'  ,
+    title:'Account Name: JUWURALO ALASOOKE LIMITED. Account Number: 10073686. Sort Code: 40-00-05. Monzo Bank.  ',
+    
   },
   {
     icon: CalendarCheck,
-    title: 'Request your dates',
-    body: 'Submit a booking request with your event and return dates. We confirm availability within 24 hours.',
+    title: 'Please send a screenshot or PDF of your bank transfer or payment receipt to.07586 738130 and upload it below.',
   },
   {
     icon: Truck,
-    title: 'Delivered to you',
-    body: 'Your attire arrives professionally steamed and styled, two days before your event, anywhere in the UK.',
+    title: 'We will confirm availability and payment within 24 hours.',
+    
   },
   {
     icon: PackageCheck,

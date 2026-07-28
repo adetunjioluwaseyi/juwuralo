@@ -15,64 +15,66 @@ type Shot = {
 
 const SHOTS: Shot[] = [
   {
-    src: '/images/hero-couple.png',
+    src: '/images/h.jpg',
     alt: 'Couple in purple and gold Aso Oke attire with coral beads',
     caption: 'Traditional wedding — London',
     category: 'Weddings',
     tall: true,
   },
   {
-    src: '/images/collection-edo.png',
+    src: '/images/e.jpg',
     alt: 'Edo bride in coral bead crown and purple attire',
     caption: 'Edo bridal styling',
     category: 'Bridal',
   },
   {
-    src: '/images/asooke-purple.png',
+    src: '/images/v.jpg',
     alt: 'Woman in deep purple and gold Aso Oke with sculptural gele',
     caption: 'Purple royal Aso Oke',
     category: 'Aso Oke',
   },
   {
-    src: '/images/edo-bridal.png',
+    src: '/images/u.jpg',
     alt: 'Edo bride in red velvet wrapper with coral bead corset',
     caption: 'Engagement ceremony — Manchester',
     category: 'Bridal',
     tall: true,
   },
   {
-    src: '/images/collection-beads.png',
+    src: '/images/n.jpg',
     alt: 'Layered traditional coral bead necklace sets',
     caption: 'Coral bead detail',
     category: 'Accessories',
   },
   {
-    src: '/images/asooke-ivory.png',
+    src: '/images/l.jpg',
     alt: 'Man in ivory and gold embroidered agbada with fila cap',
     caption: 'Groom in ivory agbada',
     category: 'Grooms',
   },
+  
   {
-    src: '/images/collection-esan.png',
-    alt: 'Woman in red Esan attire with coral bead headpiece',
-    caption: 'Esan ceremonial look',
+    src: '/images/4.jpg',
+    alt: 'Woman in burgundy and gold Esan ceremonial attire',
+    caption: 'Burgundy ceremonial set',
     category: 'Bridal',
   },
+  
   {
-    src: '/images/edo-groom.png',
+    src: '/images/3.jpg',
     alt: 'Edo groom in white wrapper with layered coral bead necklaces',
     caption: 'Edo groom styling',
     category: 'Grooms',
     tall: true,
   },
   {
-    src: '/images/collection-kids.png',
+    src: '/images/r.jpg',
     alt: 'Child in cream and gold traditional agbada with cap',
     caption: 'Little one in cream agbada',
     category: 'Kids',
   },
   {
-    src: '/images/collection-asooke.png',
+    src: '/images/i.jpg',
     alt: 'Woman in teal and gold Aso Oke with ornate gele headwrap',
     caption: 'Teal and gold Aso Oke',
     category: 'Aso Oke',
@@ -84,15 +86,15 @@ const SHOTS: Shot[] = [
     category: 'Kids',
   },
   {
-    src: '/images/beads-crown.png',
+    src: '/images/7.jpg',
     alt: 'Ornate coral bead crown headpiece on a stand',
     caption: 'Coral crown headpiece',
     category: 'Accessories',
   },
   {
-    src: '/images/esan-ceremonial.png',
-    alt: 'Woman in burgundy and gold Esan ceremonial attire',
-    caption: 'Burgundy ceremonial set',
+    src: '/images/collection-esan.png',
+    alt: 'Woman in red Esan attire with coral bead headpiece',
+    caption: 'Esan ceremonial look',
     category: 'Bridal',
   },
   {

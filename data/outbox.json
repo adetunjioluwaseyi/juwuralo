@@ -5,5 +5,12 @@
     "text": "A new booking request has been submitted by Oluwaseyi Adetunji (adetunjiiretomiwa@gmail.com). Tracking: BF41D095",
     "html": "<p>New booking request submitted.</p><p><strong>Oluwaseyi Adetunji</strong> — adetunjiiretomiwa@gmail.com</p><p>Tracking: <strong>BF41D095</strong></p>",
     "_sentAt": "2026-07-27T11:20:03.572Z"
+  },
+  {
+    "to": "admin@example.com",
+    "subject": "New booking request — D073842D",
+    "text": "A new booking request has been submitted by Oluwaseyi Adetunji (adetunjiiretomiwa@gmail.com). Tracking: D073842D",
+    "html": "<p>New booking request submitted.</p><p><strong>Oluwaseyi Adetunji</strong> — adetunjiiretomiwa@gmail.com</p><p>Tracking: <strong>D073842D</strong></p>",
+    "_sentAt": "2026-07-28T08:23:17.738Z"
   }
 ]
